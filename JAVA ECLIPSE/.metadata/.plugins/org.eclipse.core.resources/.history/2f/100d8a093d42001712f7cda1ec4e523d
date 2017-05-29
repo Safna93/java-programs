@@ -1,0 +1,13 @@
+import java.util.*;
+
+public class ListDemo
+{
+	public static void main(String args[])
+	{
+	ArrayList list=new ArrayList();
+	list.add("Safna");
+	list.add("Anu");
+	list.add("Niit");
+	System.out.println(list);
+	}
+}

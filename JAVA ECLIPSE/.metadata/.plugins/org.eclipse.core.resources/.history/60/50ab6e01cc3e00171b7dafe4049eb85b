@@ -1,0 +1,40 @@
+
+import java.sql.*;
+import java.util.Scanner;
+public class PreparedStatementDemo
+{
+public static void main(String[] args) 
+{
+	try
+	{
+		Class.forName("org.h2.Driver");
+		System.out.println("Driver is Successfully Loaded");
+		Connection conne=DriverManager.getConnection("jdbc:h2:~/test","sa","safna123");
+		PreparedStatement psmt=conne.prepareStatement("insert into stud((?,?,?)");
+		int studid,mark;
+		String studname,;
+		
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Enter Student Id");
+		studid=sc.nextInt();
+		System.out.println("Enter Student name");
+		studname=sc.next();
+		System.out.println("Enter student Mark");
+		mark=sc.nextInt();
+		
+		psmt.setInt(1,studid);
+		psmt.setString(2,studname);
+		psmt.setLong(3,mark);
+		
+		int row_eff=psmt.executeUpdate();
+		if(row_eff>0)
+			System.out.println("Row inserted Successfully");
+	}
+	catch(Exception e)
+	{
+		System.out.println("Exception Arised:"+e);
+		
+	}
+}
+}

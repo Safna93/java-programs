@@ -1,0 +1,29 @@
+
+public class PerfectDisplay
+{
+public static void main(String[] args)
+{
+	int i,j,limit=100,sum=0;
+	
+	for(i=1;i<limit;i++)
+	{
+		for(j=1;j<i;j++)
+		{
+			if(i%j==0)
+			{
+				sum+=j;
+			
+			
+			
+		}
+			if(sum==i)
+			{
+		System.out.println(+sum);
+	}
+	}
+}
+}
+
+
+
+

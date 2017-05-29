@@ -1,0 +1,20 @@
+import java.util.*;
+public class SetDemo 
+{
+	public static void main(String arg[])
+	{
+		/*
+		 * HashSet will add the elements depending on the hash algorithm so we can't
+		 * anticipate how the order it will be
+		 * 
+		 * It will not insert duplicate value.
+		 */
+		HashSet hs=new HashSet();
+		
+		hs.add("Gagan");
+		hs.add("Sunil");
+		hs.add("Vinod");
+		hs.add("Gagan");
+		
+		System.out.println(hs);
+		

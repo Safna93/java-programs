@@ -1,0 +1,32 @@
+import java.util.*;
+
+public class ListDemo 
+{
+	public static void main(String arg[])
+	{
+		// Created a Collection Object
+		ArrayList list=new ArrayList();
+		
+		//Adding element to the Collection Object
+		list.add("Harish");//0
+		list.add("Suresh");
+		list.add("Harini");
+		list.add("Nitin");
+		
+		list.add(new Integer(10));
+		
+		list.add(new Student(1001,89,"Sunil"));
+		
+		//Displaying the Collection Object
+		System.out.println(list);
+		
+		//Retrieving an element from a Collection from a specific index
+		
+		String str=(String)list.get(1);
+		System.out.println("Element at Index 1:"+str);
+		
+		Student obj1=(Student)list.get(5);
+		obj1.display();
+		
+	}
+}

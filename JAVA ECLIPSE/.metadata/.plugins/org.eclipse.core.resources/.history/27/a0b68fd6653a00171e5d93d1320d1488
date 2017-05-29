@@ -1,0 +1,30 @@
+public class ArmstrongDisplay
+{
+	public static void main(String[] args)
+	{
+		int i,j,k,sum=0;
+		
+	System.out.println("the numbers are");
+	
+	for(j=100;j<=500;j++)
+	{
+	
+	i=j;
+	
+		while(i > 0)
+        {
+             k= i % 10;
+            sum = sum + (k * k * k);
+            i = i/10;
+        }
+		if(sum==j)
+		{
+			System.out.println(+j);
+		}
+		sum=0;
+	}
+	
+	
+	
+	}
+}

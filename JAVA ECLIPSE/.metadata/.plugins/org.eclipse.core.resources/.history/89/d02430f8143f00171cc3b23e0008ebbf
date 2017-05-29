@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class Armstrong 
+{
+public static void main(String[] args) 
+{
+	int i,j,sum=0,temp;
+	
+	System.out.println("Enter a number");
+	Scanner sc=new Scanner(System.in);
+	j=sc.nextInt();
+	
+	temp=j;
+	
+	while(j>0)
+	{
+		i=j%10;
+		sum=sum+(i*i*i);
+		j=j/10;
+	
+	}
+	if(temp==sum)
+	System.out.println("Armstrong");
+	else
+		System.out.println("Not Armstrong");
+	
+	
+}
+}

@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Armstrong 
+{
+public static void main(String[] args) 
+{
+	int i,j,sum=0,n;
+	
+	System.out.println("Enter a number");
+	Scanner sc=new Scanner(System.in);
+	j=sc.nextInt();
+	
+	n=j;
+	
+	while(n>0)
+	{
+		i=j%10;
+		sum=sum+(i*i*i);
+		j=j/10;
+	
+	}
+	
+	System.out.println("j");
+	
+	
+	
+}
+}

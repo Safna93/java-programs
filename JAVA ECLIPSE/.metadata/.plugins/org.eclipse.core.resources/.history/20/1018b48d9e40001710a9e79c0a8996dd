@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class evenorodd
+{
+	public static void main(String[] args)
+	{
+		
+		System.out.println("Enter a number");
+		Scanner sc=new Scanner(System.in);
+		 a=sc.nextInt();
+		int a,b,c;
+		 if(a>b&&a>c)
+		 {
+			 System.out.println("a is greatest");
+		 }
+		 if(b>a&&b>c)
+		 {
+			 System.out.println("b is greatest");
+		 }
+		 if(c>a&&c>b)
+		 {
+			 System.out.println("c is greatest");
+		 }
+		 else
+			 System.out.println("Equal");
+		
+	}
+	
+
+}

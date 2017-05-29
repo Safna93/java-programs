@@ -1,0 +1,25 @@
+
+
+1.How java is platform independent explain?
+
+
+
+With Java, you can compile source code on Windows and the compiled code (bytecode to be precise) can be executed (interpreted) on any platform running a JVM.
+ So yes you need a JVM but the JVM can run any compiled code, the compiled code is platform independent.
+
+
+
+2.What is ByteCode and explain about that?
+
+Bytecode is nothing but the intermediate representation of Java source code which is produced by the Java compiler by compiling that source code.
+ This byte code is an machine independent code.It is not an completely a compiled code but it is an intermediate code somewhere in the middle which is later 
+interpreted and executed by JVM.Bytecode is a machine code for JVM.But the machine code is platform specific whereas bytecode is platform independent that is 
+the main difference between them.It is stored in .class file which is created after compiling the source code.Most developers although have never seen byte code 
+(nor have ever wanted to see it!) One way to view the byte code is to compile your class and then open the .class file in a hex editor and translate the bytecodes 
+by referring to the virtual machine specification. A much easier way is to utilize the command-line utility javap. The Java SDK from Sun includes the java
+ disassembler, that will convert the byte codes into human-readable mnemonics.
+
+
+3.What are the different editions of java and their usage.
+
+

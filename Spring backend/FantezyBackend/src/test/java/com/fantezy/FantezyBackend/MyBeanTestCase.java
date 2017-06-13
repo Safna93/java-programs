@@ -6,7 +6,7 @@ public class MyBeanTestCase
 {
 	public static void main(String[] args)
 	{
-		System.out.println("---TestCase - Annotationconfiguration");
+		System.out.println("---TestCase - Annotationconfiguration created");
 		AnnotationConfigApplicationContext context=new AnnotationConfigApplicationContext();
 		System.out.println("Scan method called");
 		context.scan("com.fantezy.FantezyBackend");

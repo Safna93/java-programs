@@ -16,9 +16,11 @@ AnnotationConfigApplicationContext context=new AnnotationConfigApplicationContex
 context.scan("com.fantezy.FantezyBackend");
 context.refresh();
 //Inserting a Category Object
-CategoryDAO categoryDAO=(CategoryDAO)context.getBean("category");
+/*CategoryDAO categoryDAO=(CategoryDAO)context.getBean("category");
 Category category=new Category();
 category.setCatname("Sarees");
 category.setCatdesc("It looks beautiful");
+//categoryDAO.insertCategory(category);
+}*/
 }
 }

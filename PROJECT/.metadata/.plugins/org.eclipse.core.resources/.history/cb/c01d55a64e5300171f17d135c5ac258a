@@ -1,0 +1,10 @@
+package com.fantezy.FantezyBackend;
+
+public class MyBean
+{
+public void dispaly()
+{
+	System.out.println("I am in display method of my bean");
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.fantezy.FantezyBackend;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class MyBeanTestCase {
+	public static void main(String[] args) {
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+		context.scan("com.fantezy.FantezyBackend");
+		context.refresh();
+		MyBean myBean = (MyBean) context.getBean("myBean");
+		myBean.dispaly();
+
+	}
+}

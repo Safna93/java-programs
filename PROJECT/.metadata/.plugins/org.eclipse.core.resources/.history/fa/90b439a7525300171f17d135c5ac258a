@@ -1,0 +1,28 @@
+package com.fantezy.FantezyBackend.config;
+
+import javax.sql.DataSource;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
+
+@Configuration
+@ComponentScan("com.fantezy.FantezyBackend")
+public class DBConfig 
+{
+@Bean(name="dataSource")
+public DataSource getH2Datasource()
+{
+	System.out.println("Starting of the method getH2datasource");
+	DriverManagerDataSource dataSource=new DriverManagerDataSource();
+	dataSource.setDriverClassName("");
+	dataSource.setUrl("");
+	dataSource.setUsername("");
+	dataSource.setPassword("");
+	System.out.println("Data source Creation");
+	return dataSource;
+}
+
+}

@@ -1,0 +1,31 @@
+package com.fantezy.FantezyBackend;
+
+import javax.naming.Context;
+
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.fantezy.FantezyBackend.dao.ProductDAO;
+import com.fantezy.FantezyBackend.model.Category;
+import com.fantezy.FantezyBackend.model.Product;
+
+public class MyProductTestCase 
+{
+	public static void main(String[] args) {
+		AnnotationConfigApplicationContext context=new AnnotationConfigApplicationContext();
+		context.scan("com.fantezy.FantezyBackend");
+		context.refresh();
+
+	Category categoryDAO=(Category)context.getBean("categoryDAO");
+
+		
+	Category category=new Category();
+
+	category.setCatname("Saree");
+	category.setCatdesc("Wear and be Gorgeous");
+
+	categoryDAO.insertUpdateCategory(category);		
+	System.out.println("Category Inserted");
+
+	}
+	}

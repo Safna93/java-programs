@@ -33,7 +33,7 @@ public User getUser(String UserName)
 	session.close();
 	return user;
 }
-@Transactional
+/*@Transactional
 public void deleteUser(User user)
 {
 	sessionFactory.getCurrentSession().delete(user);
@@ -46,7 +46,7 @@ public List<User> getUserDetails()
 	List<User> list=query.list();
 	session.close();
 	return list;
-}
+}*/
 
 
 

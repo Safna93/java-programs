@@ -10,7 +10,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<body background="https://d2d00szk9na1qq.cloudfront.net/Product/38777abb-ba74-48c0-b2ae-c9acd8b8a7cf/Images/Large_BF-306.jpg">
+<body background="">
 
 <div class="header">
    <div class="container">

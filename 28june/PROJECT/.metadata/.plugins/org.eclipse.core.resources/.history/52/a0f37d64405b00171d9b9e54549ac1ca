@@ -1,0 +1,67 @@
+package com.fantezy.FantezyBackend;
+
+import java.util.List;
+
+import javax.naming.Context;
+
+
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.fantezy.FantezyBackend.dao.UserDAO;
+import com.fantezy.FantezyBackend.model.User;
+
+public class UserTestCase 
+{
+public static void main(String[] args) {
+	AnnotationConfigApplicationContext context=new AnnotationConfigApplicationContext();
+	context.scan("com.fantezy.FantezyBackend");
+	context.refresh();
+
+UserDAO userDAO=(UserDAO)context.getBean("userDAO");
+
+	
+User user=new User();
+
+
+/*user.setPassword("Safna123");
+user.setCustomerName("Aruna");	
+user.setRole("");
+user.setEnabled(null);
+user.setEmail("safna");
+user.setAddress("Chennai");
+user.setMobile(123456);
+
+userDAO.insertUpdateUser(user);		
+System.out.println("User Inserted");*/
+
+
+//Retrieval TestCase
+
+		User user1=userDAO.getUser("");
+		System.out.println("User Name:"+user1.getUserName());
+		System.out.println("User Description:"+user1.getRole());
+		
+		//Deletion TestCase
+		User user2=userDAO.getUser("");
+		userDAO.deleteUser(user2);
+		System.out.println("The User Deleted");
+		
+		//Retrieving the Data
+		
+		List<User> list=userDAO.getUserDetails();
+		
+		for(User user3:list)
+		{
+			System.out.println(user3.getUserName()+":"+user3.getPassword()+":"+user3.getRole());
+		}
+		
+		//Update the User
+		User user4=userDAO.getUser("");
+		user4.setRole("");
+		userDAO.insertUpdateUser(user4);
+		System.out.println("The User Updated");
+		
+	
+}
+}

@@ -1,0 +1,54 @@
+<%@ page language="java" contentType="text/html"%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+<%@include file="Header.jsp" %>
+
+
+<form:form action="InsertSupplier" modelAttribute="supplier">
+<table align="center">
+			<tr>
+				<td colspan="2"><center>Supplier Details</center></td>
+			</tr>
+			<tr>
+				<td>Supplier ID</td>
+				<td><form:input path="suppid" /></td>
+			</tr>
+			<tr>
+				<td>Supplier Name</td>
+				<td><form:input path="suppname" /></td>
+			</tr>
+			
+			
+				<td>Supplier Address</td>
+				<td><form:textarea path="suppaddress" /></td>
+			</tr>
+			
+			<tr>
+			<td colspan="2"><input type="submit" /></td>
+			</tr>
+</table>
+</form:form>
+
+<!-- Displaying the Supplier data using Table -->
+<table cellspacing="2" align="center" border="1">
+
+	<tr bgcolor="pink">
+		<td>Supplier ID</td>
+		<td>Supplier Name</td>
+		
+		<td>Operation</td>
+	</tr>
+	<c:forEach items="${prodlist}" var="supplier">
+		<tr bgcolor="cyan">
+			<td>${supplier.suppid}</td>
+			<td>${supplier.suppname}</td>
+			<td>${supplier.suppaddress}</td>
+			<td><a href="<c:url value="deleteSupplier/${supplier.suppid}"/>">Delete</a>
+				<a href="<c:url value="updateSupplier/${supplier.suppid}"/>">Update</a>
+			</td>
+		</tr>
+	</c:forEach>
+</table>
+<!-- Completed Displaying Table -->
+
+</body>
+</html>

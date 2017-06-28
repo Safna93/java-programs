@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Wed Jun 28 22:08:08 IST 2017
+org.eclipse.jst.j2ee.server\:FantezyBackend=WEB-INF/lib/FantezyBackend-0.0.1-SNAPSHOT.jar
+org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\Shafna\ Shroff\\.m2\\repository\\org\\springframework\\spring-web\\4.3.5.RELEASE\\spring-web-4.3.5.RELEASE.jar=WEB-INF/lib/spring-web-4.3.5.RELEASE.jar

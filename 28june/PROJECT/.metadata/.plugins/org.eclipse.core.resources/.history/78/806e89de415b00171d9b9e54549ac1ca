@@ -1,0 +1,107 @@
+package com.fantezy.FantezyFrontend.controller;
+
+import java.util.LinkedHashMap;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.fantezy.FantezyBackend.dao.UserDAO;
+import com.fantezy.FantezyBackend.model.User;
+
+
+
+@Controller
+public class UserController 
+{
+	
+	
+	@Autowired
+	UserDAO userDAO;
+	
+	@RequestMapping("/User")
+	public String showUser(Model m)
+	{
+		
+		
+		User user=new User();
+		
+		m.addAttribute("userlist",this.getUserList());
+		m.addAttribute("user",user);
+		
+		List<User> userlist=userDAO.getUserDetails();
+		m.addAttribute("userlist",userlist);
+		
+		
+		return "User";
+	}
+	
+	
+
+	@RequestMapping(value="/InsertUser",method=RequestMethod.POST)
+	public String insertUser(@ModelAttribute("user") User user,Model m)
+	{
+		System.out.println("---User Inserted---");
+		userDAO.insertUpdateUser(user);	
+		System.out.println("User Inserted");
+		
+		List<User> userlist=userDAO.getUserDetails();
+		m.addAttribute("userlist",userlist);
+		
+		return "User";
+	}
+	
+	@RequestMapping(value="/updateUser/{username}")
+	public String updateUser(@PathVariable("username")int username,Model m)
+	{
+		
+		User user=userDAO.getUser("sai");
+		m.addAttribute("user",user);
+		m.addAttribute("userlist",this.getUserList());
+		List<User> userlist=userDAO.getUserDetails();
+		m.addAttribute("userlist",userlist);
+		
+		return "redirect:/User";
+	}
+	
+	@RequestMapping(value="/deleteUser/{username}")
+	public String deleteUser(@PathVariable("username")String username,Model m)
+	{
+		
+		User user=userDAO.getUser(username);
+		userDAO.deleteUser(user);
+		
+		User user1=new User();
+		m.addAttribute("user",user1);
+		m.addAttribute("userlist",this.getUserList());
+		List<User> userlist=userDAO.getUserDetails();
+		
+		m.addAttribute("userlist", userlist);
+		
+		return "User";
+	}
+	
+	public LinkedHashMap<Integer,String> getUserList()
+	{
+		List<User> list=userDAO.getUserDetails();
+		
+		LinkedHashMap<Integer, String> userlist=new LinkedHashMap<Integer,String>();
+		
+		for(User user:list)
+		{
+			userlist.put(user.getMobile(),user.getUserName());
+		}
+		
+		return userlist;
+	}
+	
+	
+	
+	
+}

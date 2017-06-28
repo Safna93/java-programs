@@ -1,0 +1,12 @@
+com\fantezy\FantezyBackend\MyConfiguration.class
+com\fantezy\FantezyBackend\dao\SupplierDAO.class
+com\fantezy\FantezyBackend\dao\CategoryDAO.class
+com\fantezy\FantezyBackend\config\DBConfig.class
+com\fantezy\FantezyBackend\dao\ProductDAO.class
+com\fantezy\FantezyBackend\dao\UserDAO.class
+com\fantezy\FantezyBackend\model\User.class
+com\fantezy\FantezyBackend\model\Supplier.class
+com\fantezy\FantezyBackend\model\Product.class
+com\fantezy\FantezyBackend\App.class
+com\fantezy\FantezyBackend\model\Category.class
+com\fantezy\FantezyBackend\MyBean.class

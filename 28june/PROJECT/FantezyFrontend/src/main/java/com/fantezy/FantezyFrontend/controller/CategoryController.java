@@ -2,6 +2,7 @@ package com.fantezy.FantezyFrontend.controller;
 
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.fantezy.FantezyBackend.dao.CategoryDAO;
-import com.fantezy.FantezyBackend.model.Category;
+import com.fantezy.FantezyBackendProject.dao.CategoryDAO;
+import com.fantezy.FantezyBackendProject.model.Category;
 
 @Controller
 public class CategoryController 

@@ -1,0 +1,19 @@
+package com.fantezy.FantezyFrontendProject.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.fantezy.FantezyBackendProject.dao.CartDAO;
+
+@Controller
+public class CartControlller {
+@Autowired
+CartDAO cartDAO;
+@RequestMapping(value="/addToCart/{prodid}")
+public String addToCart(@PathVariable("cartid") int cartid)
+{
+	return "Cart";
+}
+}

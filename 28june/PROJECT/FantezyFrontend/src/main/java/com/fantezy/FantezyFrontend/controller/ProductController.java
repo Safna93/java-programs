@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.fantezy.FantezyBackend.dao.CategoryDAO;
-import com.fantezy.FantezyBackend.dao.ProductDAO;
-import com.fantezy.FantezyBackend.model.Category;
-import com.fantezy.FantezyBackend.model.Product;
+import com.fantezy.FantezyBackendProject.dao.CategoryDAO;
+import com.fantezy.FantezyBackendProject.dao.ProductDAO;
+import com.fantezy.FantezyBackendProject.model.Category;
+import com.fantezy.FantezyBackendProject.model.Product;
 
 @Controller
 public class ProductController {

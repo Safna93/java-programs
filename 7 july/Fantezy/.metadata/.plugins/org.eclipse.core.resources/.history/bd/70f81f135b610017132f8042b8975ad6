@@ -1,0 +1,43 @@
+package com.fantezy.FantezyFrontendProject.controller;
+
+import java.util.List;
+
+import javax.servlet.http.HttpSession;
+
+import org.hibernate.Session;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.fantezy.FantezyBackendProject.dao.CartDAO;
+import com.fantezy.FantezyBackendProject.dao.ProductDAO;
+import com.fantezy.FantezyBackendProject.model.Cart;
+import com.fantezy.FantezyBackendProject.model.Product;
+
+@Controller
+public class CartControlller {
+@Autowired
+CartDAO cartDAO;
+@RequestMapping(value="/addToCart/{prodid}")
+public String addToCart(@PathVariable("prodid") int prodid,@RequestParam("quantity") int quantity,HttpSession session,Model m)
+{
+	
+	Cart cart=new Cart();
+	String username=(String) session.getAttribute("username");
+	cart.setCartid(1001);
+	cart.setProdid(prodid);
+	cart.setQuantity(quantity);
+	cart.setStatus("N");
+	cart.setUsername(username);
+	Product product=ProductDAO.getProduct(prodid);
+	cart.setProdname(product.getProdname());
+	cart.setPrice(product.getPrice());
+	cartDAO.addToCart(cart);
+	List<Cart> list=cartDAO.getCartItems(username);
+	m.addAttribute("list", list);
+	return "Cart";
+}
+}

@@ -4,6 +4,7 @@ package com.fantezy.FantezyFrontend.controller;
 
 
 import java.util.LinkedHashMap;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,8 +15,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.fantezy.FantezyBackend.dao.SupplierDAO;
-import com.fantezy.FantezyBackend.model.Supplier;
+import com.fantezy.FantezyBackendProject.dao.SupplierDAO;
+import com.fantezy.FantezyBackendProject.model.Supplier;
 
 
 

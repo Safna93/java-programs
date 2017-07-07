@@ -1,0 +1,5 @@
+package com.fantezy.FantezyBackendProject.model;
+
+public class Register {
+
+}

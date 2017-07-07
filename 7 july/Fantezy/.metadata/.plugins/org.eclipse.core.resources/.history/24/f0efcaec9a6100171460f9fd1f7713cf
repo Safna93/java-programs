@@ -1,0 +1,5 @@
+package com.fantezy.FantezyBackendProject.dao;
+
+public class UserRegisterDAO {
+
+}

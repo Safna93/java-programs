@@ -1,0 +1,17 @@
+package com.fantezy.FantezyBackendProject.dao;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+@Repository("cartDAO")
+public class CartDAO
+{
+@Autowired
+SessionFactory sessionFactory;
+public CartDAO(SessionFactory sessionFactory)
+{
+	this.sessionFactory=sessionFactory;
+	
+}
+}

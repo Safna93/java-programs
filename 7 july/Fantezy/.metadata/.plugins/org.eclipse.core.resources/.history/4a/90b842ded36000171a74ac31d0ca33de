@@ -1,0 +1,5 @@
+package com.fantezy.FantezyFrontendProject.controller;
+
+public class RegistrationController {
+
+}

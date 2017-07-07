@@ -1,0 +1,28 @@
+package com.fantezy.FantezyBackendProject.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+public class UserRegister1 
+{
+	@Entity
+	@Table
+	public class UserRegister
+	{
+	@Id
+	@GeneratedValue
+	int userid1;
+	String userName;
+	String password;
+	String customerName;
+	String role="Role_User";
+	boolean enabled=true;
+	String gmail;
+	String gender;
+	String address;
+	int mobile;
+	
+
+}

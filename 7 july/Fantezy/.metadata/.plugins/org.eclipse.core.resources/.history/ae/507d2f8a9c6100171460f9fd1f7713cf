@@ -1,0 +1,68 @@
+package com.fantezy.FantezyBackendProject;
+
+import java.util.List;
+
+
+import javax.naming.Context;
+
+
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.fantezy.FantezyBackendProject.dao.UserRegisterDAO;
+import com.fantezy.FantezyBackendProject.model.UserRegister1;
+
+public class UserTest 
+{
+public static void main(String[] args) {
+	AnnotationConfigApplicationContext context=new AnnotationConfigApplicationContext();
+	context.scan("com.fantezy.FantezyBackendProject");
+	context.refresh();
+
+UserRegisterDAO userRegisterDAO=(UserRegisterDAO)context.getBean("userRegisterDAO");
+
+	
+UserRegister1 user=new UserRegister1();
+user.setUserName("Sam");
+
+user.setPassword("Safna123");
+user.setCustomerName("Aruna");	
+
+
+user.setEmail("safna");
+user.setAddress("Chennai");
+user.setMobile(123456);
+
+userRegisterDAO.insertUpdateUser(user);		
+System.out.println("User Inserted");
+
+
+//Retrieval TestCase
+
+		UserRegister1 user1=userRegister1DAO.getUser("");
+		System.out.println("User Name:"+user1.getUserName());
+		System.out.println("User Description:"+user1.getMobile());
+		
+		//Deletion TestCase
+		UserRegister1 user2=userRegister1DAO.getUser("");
+		userRegister1DAO.deleteUser(user2);
+		System.out.println("The User Deleted");
+		
+		//Retrieving the Data
+		
+		List<UserRegister1> list=userRegister1DAO.getUserDetails();
+		
+		for(UserRegister1 user3:list)
+		{
+			System.out.println(user3.getUserName()+":"+user3.getPassword()+":"+user3.getMobile());
+		}
+		
+		//Update the User
+		UserRegister1 user4=userRegister1DAO.getUser("");
+		user4.setMobile(123);
+		userRegister1DAO.insertUpdateUser(user4);
+		System.out.println("The User Updated");
+		
+	
+}
+}

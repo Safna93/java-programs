@@ -1,0 +1,24 @@
+package com.fantezy.FantezyBackendProject.dao;
+
+import javax.transaction.Transactional;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+@Repository("cartDAO")
+public class CartDAO
+{
+@Autowired
+SessionFactory sessionFactory;
+public CartDAO(SessionFactory sessionFactory)
+{
+	this.sessionFactory=sessionFactory;
+	
+}
+@Transactional
+public void addToCart(Cart cartitem)
+{
+	sessionFactory.getCurrentSession().saveOrUpdate(cartitem);
+}
+}

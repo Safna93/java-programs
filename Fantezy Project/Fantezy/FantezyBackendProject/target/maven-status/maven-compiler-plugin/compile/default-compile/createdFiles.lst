@@ -1,0 +1,12 @@
+com\fantezy\FantezyBackendProject\dao\UserDAO.class
+com\fantezy\FantezyBackendProject\dao\CartDAO.class
+com\fantezy\FantezyBackendProject\App.class
+com\fantezy\FantezyBackendProject\dao\CategoryDAO.class
+com\fantezy\FantezyBackendProject\model\Cart.class
+com\fantezy\FantezyBackendProject\dao\ProductDAO.class
+com\fantezy\FantezyBackendProject\dao\SupplierDAO.class
+com\fantezy\FantezyBackendProject\model\UserRegister.class
+com\fantezy\FantezyBackendProject\config\DBConfig.class
+com\fantezy\FantezyBackendProject\model\Supplier.class
+com\fantezy\FantezyBackendProject\model\Product.class
+com\fantezy\FantezyBackendProject\model\Category.class

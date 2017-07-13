@@ -1,0 +1,10 @@
+<%@ page language="java" contentType="text/html"%>
+
+<%@include file="WEB-INF\views\Header.jsp" %>
+<%@include file="WEB-INF\views\carousel.jsp" %>
+
+
+
+
+</body>
+</html>

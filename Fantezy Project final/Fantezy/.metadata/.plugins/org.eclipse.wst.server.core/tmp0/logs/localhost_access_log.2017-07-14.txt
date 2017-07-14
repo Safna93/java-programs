@@ -1,0 +1,8 @@
+0:0:0:0:0:0:0:1 - - [14/Jul/2017:00:55:45 +0530] "GET /FantezyFrontendProject/ HTTP/1.1" 200 10682
+0:0:0:0:0:0:0:1 - - [14/Jul/2017:00:55:45 +0530] "GET /FantezyFrontendProject/resources/css/Head.css HTTP/1.1" 200 2034
+0:0:0:0:0:0:0:1 - - [14/Jul/2017:00:55:45 +0530] "GET /FantezyFrontendProject/resources/css/About.css HTTP/1.1" 200 632
+0:0:0:0:0:0:0:1 - - [14/Jul/2017:00:55:46 +0530] "GET /FantezyFrontendProject/resources/css/Head.css HTTP/1.1" 200 2034
+0:0:0:0:0:0:0:1 - - [14/Jul/2017:00:55:46 +0530] "GET /FantezyFrontendProject/resources/css/About.css HTTP/1.1" 200 632
+0:0:0:0:0:0:0:1 - - [14/Jul/2017:00:55:49 +0530] "GET /FantezyFrontendProject/displaysaree/ HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [14/Jul/2017:00:56:05 +0530] "GET /FantezyFrontendProject/displaysaree/ HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [14/Jul/2017:00:56:05 +0530] "GET /favicon.ico HTTP/1.1" 404 1016

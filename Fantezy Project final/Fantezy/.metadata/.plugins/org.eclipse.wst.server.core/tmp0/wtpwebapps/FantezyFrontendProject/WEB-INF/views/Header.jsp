@@ -14,7 +14,7 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<body background="https://s-media-cache-ak0.pinimg.com/originals/1c/c7/ae/1cc7aec96b0fa6b47d2ef5193c549cd0.png">
+<body background="https://d2d00szk9na1qq.cloudfront.net/Product/acd07823-ddb2-45fc-ba0f-d0b2acf2ce9b/Images/Large_EH-841.jpg">
 		<div class="container">
 			<header style="height: 50px;"></header>
 			<!------------- Navbar -------------->
@@ -44,15 +44,7 @@
 								<li><a href="displayProducts">Products</a></li>
 						
                        
-                       <li class="dropdown"><a href="#" class="dropdown-toggle"
-								data-toggle="dropdown" role="button" aria-haspopup="true"
-								aria-expanded="false">Categories<span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="displaysaree/${categorylist.catid }">Sarees</a></li>
-									<li><a href="displayLehanga/${categorylist.catid }">Lehangas</a></li>
-									<li><a href="displayKurta/${categorylist.catid }">Kurtas</a></li>
-									<li><a href="displaySkirt/${categorylist.catid }">Skirts</a></li>
-
+                       
 								</ul>
                        
                        

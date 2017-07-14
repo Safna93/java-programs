@@ -14,7 +14,7 @@
 <form action="<c:url value="/updateCartItem/${cartitem.citemid }" />" />
 <td>${cartitem.prodname }</td>
 <td><input type="text" value="${cartitem.quantity}"name="quantity" required/></td>
-<td>RS.${cartitem.price * cartitem.quantity}</td>
+<td>Rs.${cartitem.price * cartitem.quantity}</td>
 <td><img src="<c:url value='/resources/images/${cartitem.prodid}.jsp'/>" width="100" height="100">
 <td>
 <input type="submit" value="UPDATE" class="btn-success btn-block"/>

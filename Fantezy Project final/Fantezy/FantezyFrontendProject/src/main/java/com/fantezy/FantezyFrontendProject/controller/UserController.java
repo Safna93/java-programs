@@ -88,15 +88,8 @@ public class UserController {
 	
 	
 	
-	 @RequestMapping("/perform_logout")
-	    public class SignOutController {
-
-	      @RequestMapping(method=RequestMethod.GET)
-	      public String logout(HttpSession session) {
-	        session.invalidate();
-	        return "Main";
-	      }
-	    }
+	 
+	    
 	
 
 }

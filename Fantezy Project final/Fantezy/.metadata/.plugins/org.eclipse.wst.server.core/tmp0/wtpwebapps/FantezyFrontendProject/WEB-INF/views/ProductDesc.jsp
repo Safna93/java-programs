@@ -41,6 +41,11 @@
     <option name="3" >3</option>
     <option name="4" >4</option>
     <option name="5" >5</option>
+    <option name="6">6</option>
+    <option name="7" >7</option>
+    <option name="8" >8</option>
+    <option name="9" >9</option>
+    
     
     
 </select>
